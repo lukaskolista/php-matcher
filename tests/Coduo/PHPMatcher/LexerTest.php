@@ -21,8 +21,8 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     public static function validStringValuesProvider()
     {
         return array(
-            array('"String"'),
-            array("'String'"),
+            array('"StringConverter"'),
+            array("'StringConverter'"),
         );
     }
 
