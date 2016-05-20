@@ -2,7 +2,7 @@
 
 namespace Coduo\PHPMatcher\Matcher;
 
-use Coduo\ToString\String;
+use Coduo\ToString\StringConverter;
 
 /**
  * @deprecated since 1.1, to be removed in 2.0. Use StringMatcher, NumberMatcher, IntegerMatcher,
@@ -18,7 +18,7 @@ class TypeMatcher extends Matcher
     public function match($value, $pattern)
     {
         if (gettype($value) !== $this->extractType($pattern)) {
-            $this->error = sprintf("%s \"%s\" does not match %s pattern.", gettype($value), new String($value), $pattern);
+            $this->error = sprintf("%s \"%s\" does not match %s pattern.", gettype($value), new StringConverter($value), $pattern);
             return false;
         }
 
